@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 export default function FloatingMedia({
@@ -11,6 +11,7 @@ export default function FloatingMedia({
   depth = 1,
 }) {
   const ref = useRef(null);
+  const videoRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -23,6 +24,14 @@ export default function FloatingMedia({
     [0, 5 * (depth % 2 === 0 ? 1 : -1)],
   );
 
+  useEffect(() => {
+    if (type === "video" && videoRef.current) {
+      videoRef.current
+        .play()
+        .catch((e) => console.log("Video autoplay blocked", e));
+    }
+  }, [type]);
+
   return (
     <motion.div
       ref={ref}
@@ -34,6 +43,7 @@ export default function FloatingMedia({
     >
       {type === "video" ? (
         <video
+          ref={videoRef}
           src={src}
           autoPlay
           loop

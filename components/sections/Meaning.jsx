@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import FloatingMedia from "../FloatingMedia";
 
 const words = [
   "Kindness",

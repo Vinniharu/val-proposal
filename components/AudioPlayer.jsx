@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Music, Music2 } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function AudioPlayer() {
+export default function AudioPlayer({ autoStart }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 

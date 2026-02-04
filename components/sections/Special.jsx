@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-
 import FloatingMedia from "../FloatingMedia";
 
 export default function Special() {

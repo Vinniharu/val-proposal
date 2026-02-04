@@ -2,6 +2,8 @@
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 import AudioPlayer from "@/components/AudioPlayer";
+import Preloader from "@/components/Preloader";
+import { useState } from "react";
 
 // Sections
 import Hero from "@/components/sections/Hero";
@@ -18,23 +20,32 @@ import Message from "@/components/sections/Message";
 import Closing from "@/components/sections/Closing";
 
 export default function Home() {
+  const [started, setStarted] = useState(false);
+
   return (
-    <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-      <main className="w-full min-h-screen bg-navy-950 text-silver-100 overflow-x-hidden">
-        <AudioPlayer />
-        <Hero />
-        <Quote />
-        <MarchBegan />
-        <Timeline />
-        <Growth />
-        <Meeting />
-        <Meaning />
-        <Special />
-        <Valentines />
-        <Promises />
-        <Message />
-        <Closing />
-      </main>
-    </ReactLenis>
+    <>
+      {!started && <Preloader onComplete={() => setStarted(true)} />}
+
+      {started && (
+        <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
+          <main className="w-full min-h-screen bg-navy-950 text-silver-100 overflow-x-hidden">
+            <AudioPlayer autoStart={true} />
+
+            <Hero />
+            <Quote />
+            <MarchBegan />
+            <Timeline />
+            <Growth />
+            <Meeting />
+            <Meaning />
+            <Special />
+            <Valentines />
+            <Promises />
+            <Message />
+            <Closing />
+          </main>
+        </ReactLenis>
+      )}
+    </>
   );
 }
