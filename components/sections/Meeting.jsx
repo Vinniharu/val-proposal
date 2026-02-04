@@ -8,8 +8,7 @@ export default function Meeting() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center py-20 bg-navy-950 relative overflow-hidden">
       <FloatingMedia
-        src="/video/video1.mp4"
-        type="video"
+        src="/new1.jpeg"
         className="bottom-20 right-10 md:right-32 rotate-[3deg] w-48 md:w-64"
       />
 

@@ -29,7 +29,7 @@ export default function Timeline() {
     <section className="min-h-screen flex flex-col items-center justify-center py-20 relative px-6">
       <FloatingMedia
         src="/image2.jpeg"
-        className="top-40 right-10 md:right-20 rotate-[10deg]"
+        className="top-40 left-30 md:right-20 -rotate-[10deg]"
       />
 
       <motion.h2

@@ -7,9 +7,8 @@ export default function Special() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center py-20 bg-navy-950 px-6 relative overflow-hidden">
       <FloatingMedia
-        src="/video/video2.mp4"
-        type="video"
-        className="top-20 right-10 md:right-40 rotate-[-2deg]"
+        src="/new2.jpeg"
+        className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[2deg] w-64 md:w-80"
       />
 
       {/* Background Connected Nodes Animation */}

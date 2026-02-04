@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "lenis/react";
 import AudioPlayer from "@/components/AudioPlayer";
 import Preloader from "@/components/Preloader";
 import { useState } from "react";

@@ -9,7 +9,7 @@ export default function MarchBegan() {
     <section className="min-h-screen flex flex-col items-center justify-center py-20 bg-navy-900 overflow-hidden relative">
       <FloatingMedia
         src="/image1.jpeg"
-        className="top-20 left-10 md:left-20 rotate-[-5deg]"
+        className="top-20 right-10 md:right-20 rotate-[10deg]"
       />
 
       {/* Background Month Watermark */}
